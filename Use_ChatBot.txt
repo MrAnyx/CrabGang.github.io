@@ -1,0 +1,8 @@
+Les mots clés pour l'utilisation du bot sont :
+TEMPERATURE
+AIR_QUALITY
+CRAB'_GANG
+THANKS
+
+donc la majorité des phrases contenant ces mots clés sont accessibles.
+De plus, des questions simples commme "Qui est tu ?", "Bonjour", etc...
