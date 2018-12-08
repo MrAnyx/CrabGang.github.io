@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="shortcut icon" href="icone.ico">
+        <link rel="stylesheet" href="style.css">
+        <script type="text/javascript" src="script.js"></script>
+        <title>Projet Namib</title>
+    </head>
+    <body id="top_page" class="light-mode">
+        <script type="text/javascript">
+
+            window.onload = function(){
+                currentSlide(1);
+
+                /* a partir de 19h le theme sombre est activé et a 9h le theme claire est activé*/
+                setInterval(actualiser,1000);
+                setInterval(freq, 1000);
+                setInterval(temp, 1000);
+
+            }
+        </script>
+        <!-- div qui englobe le site entier -->
+        <div class="siteEntier">
+
+            <!-- image pour l'accueil -->
+            <div class="content"></div>
+
+            <!-- elmeents sur la page d'accueil -->
+            <div class="caption">
+
+                <!-- titre page principale -->
+                <div class="title">
+                    <span class="border"><strong>Projet Namib</strong></span>
+                </div>
+
+
+                <!-- fleche down animation -->
+                <div class="down">
+                    <a href="#contenuPage"><img src="down.png"></a>
+                </div>
+            </div>
+
+            <!-- fleche bas droite pour retour haut page -->
+            <a href="#top_page"><img src="ARROWUP.jpg" class="arrowUp"></a>
+
+
+            <div class="projet" id="contenuPage">
+
+                <!-- barre de navigation -->
+                <div class="navMenu">
+                    <ul class="ulMenu">
+                        <li class="liMenu "><a href="#quisommenous">Qui sommes-nous ?</a></li>
+                        <li class="liMenu"><a href="#photomosaique">Photomosaïque</a></li>
+                        <li class="liMenu"><a href="#contenuPage">Projet Namib</a></li>
+                        <li class="liMenu"><a onclick="toggleDarkLight()" id = "changementCouleur">Thème foncé</a ></li>
+                        <li class="liMenu"><a onclick="choixAuto()" id = "changementAuto">Choix Automatique du thème ✓</a ></li>
+                        <li class="liMenuTitle"><a href = "#top_page" class="lienTitre">Crab'Gang</a></li>
+                    </ul>
+                </div>
+
+                <!-- frequence cradiaque, temp corporelle, temp exterieur -->
+
+                <div class="data" id="projetNamib">
+
+                <div class="slideshow-container">
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">1 / 3</div>
+                        <img src="electro.jpg" style="width:100%">
+                        <div class="text" id="text_freq">Fréquence cardiaque : 88bpm</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">2 / 3</div>
+                        <img src="termo.jpg" style="width:100%">
+                        <div class="text" id="text_temp">Température corporelle : 37.8°C</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">3 / 3</div>
+                        <img src="desert.jpg" style="width:100%">
+                        <div class="text">
+                            <a class="weatherwidget-io" href="https://forecast7.com/fr/n24d4915d80/sesriem/" data-label_1="SESRIEM" data-label_2="WEATHER" data-theme="original" data-basecolor="#ed8b00" data-highcolor="#ed1800" data-lowcolor="#ffffff" data-suncolor="#ed1400" >SESRIEM WEATHER</a>
+                            <script>
+                                !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+                            </script>
+                        </div>
+                    </div>
+
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                    </div>
+                    <br>
+
+                    <div style="text-align:center" class="div_dot">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                    </div>
+
+                <h1 align="center" class="titreh1" id = "photomosaique">Photomosaïque</h1>
+
+                <img src="photomosaique.jpg" class = "photo">
+
+                <h1 align="center" class="titreh1" id = "quisommenous">Qui sommes nous ?</h1>
+                <div class="qui_sommes_nous">
+
+                        <p> Une équipe de six étudiants en deuxième année de cycle préparatoire à la super école de Limoges : 3iL.</p>
+                        <p> Nous ne sommes pas fort en développement web, même en développement tout court, mais notre but était d'apprendre ensemble durant cette nuit.</p>
+                        <p> Notre équipe est composée de :
+                        <ul>
+                            <li>Antoine Troncard - Leader</li>
+                            <li>Robin Bidanchon - Développeur</li>
+                            <li>Thomas Allain - Communiquant</li>
+                            <li>Antoine Tabaraud -  Développeur</li>
+                            <li>Martin Morand - Développeur</li>
+                            <li>Thomas Ruiz - Développeur</li>
+                        </ul>
+                        Nous avons essayé de mettre en commun toutes nos compétences pour essayer de produire quelque chose de bien.
+                        </p>
+                        <p> Pour cela, nous avons choisi six défis :
+                        <ul>
+                            <li>Le défi correspondant au sujet 2018 (Obligatoire)</li>
+                            <li>Le défi proposé par Airbus qui consiste à créer une image mosaïque</li>
+                            <li>Le défi proposé par Ubisoft qui consiste à créer une vidéo de présentation de l'équipe et de notre production</li>
+                            <li>Le défi proposé par Sfeir qui consiste à réaliser le thème de la nuit de l'info en incluant une ou plusieurs fonctionnalité(s) Google Assistant</li>
+                            <li>Le défi proposé par Fealinx qui consiste à rendre le site accessible à tous et via un QRCode</li>
+                            <li>Le défi proposé par Altan qui consiste à implémenter un mode nuit sur le site web</li>
+                        </ul>
+                    </p>
+
+                    <p>Notre répartition du travail s'est faite en fonction de nos compétences, mais nous faisions régulièrement des points pour centraliser toutes les informations</p>
+
+
+
+                    <form class="utile">
+                        <div class="check">
+
+                            <p>Check-list avant départ</p>
+                            <ul style="list-style-type: none;">
+                                <li><input type="checkbox" name="choix" value="Nourriture">Nourriture</li>
+                                <li><input type="checkbox" name="choix" value="Boisson">Boisson</li>
+                                <li><input type="checkbox" name="choix" value="Kit de premiers secours">Kit de premiers secours</li>
+                                <li><input type="checkbox" name="choix" value="Habits">Habits</li>
+                                <li><input type="checkbox" name="choix" value="Matériel bivouac">Matériel de bivouac</li>
+                                <li><input type="checkbox" name="choix" value="Moyen de défense">Moyen de défense</li>
+                                <li><input type="checkbox" name="choix" value="GPS">GPS</li>
+                                <li><input type="checkbox" name="choix" value="Batteries">Batteries</li>
+                                <li><input type="checkbox" name="choix" value="Carte et boussole">Carte et boussole</li>
+                            </ul>
+                        </div>
+                        <div class="map">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15138155.682756707!2d6.640898462582684!3d-22.132121437490987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1c74f8343ddbf5a1%3A0xda0fb83c1339ad83!2sD%C3%A9sert+du+Namib!5e0!3m2!1sfr!2sfr!4v1544152367781" width="800" height="490px" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
+                    </form>
+
+
+                </div>
+
+                <div class="bot">
+
+                    <iframe class="tchat" height="300px" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/38543d0d-6a69-4328-bf7f-834e74c57921"></iframe>
+                    <div class="how_to_use_bot">
+                        Les mots clés pour l'utilisation du bot sont :<br>
+                        TEMPERATURE <br>
+                        AIR_QUALITY<br>
+                        CRAB'_GANG<br>
+                        THANKS<br>
+                        <br>
+                        donc la majorité des phrases contenant ces mots clés sont accessibles.<br>
+                        De plus, des questions simples commme "Qui est tu ?", "Bonjour", etc...
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </body>
+</html>
